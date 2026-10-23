@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Blocks search engines from indexing the page if you list it in public bios -->
 <meta name="robots" content="noindex, nofollow">
 <title>My Links</title>
 
@@ -14,11 +13,11 @@
 
 <style>
 :root {
---bg-color: #080303; /* Deep vampire black-red */
---card-bg: #120505; /* Velvet dark red-black container */
---text-color: #ffffff; /* Stark white readability */
---vamp-red: #8b0000; /* Dark blood red accent */
---neon-glow: #ff0000; /* Intense neon red glow */
+--bg-color: #080303;
+--card-bg: #120505;
+--text-color: #ffffff;
+--vamp-red: #8b0000;
+--neon-glow: #ff0000;
 }
 
 body {
@@ -33,7 +32,7 @@ margin: 0;
 min-height: 100vh;
 }
 
-/* 18+ Age Gate Overlay */
+/* 18+ Age Gate Overlay with Jagged Theme */
 #age-gate {
 position: fixed;
 top: 0;
@@ -55,9 +54,9 @@ box-sizing: border-box;
 background-color: var(--card-bg);
 border: 2px solid var(--vamp-red);
 padding: 40px;
-border-radius: 12px;
 max-width: 450px;
 box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+clip-path: polygon(2% 0%, 95% 4%, 100% 0%, 97% 45%, 100% 95%, 50% 97%, 3% 100%, 0% 70%, 2% 25%);
 }
 
 .gate-title {
@@ -68,17 +67,57 @@ text-transform: uppercase;
 letter-spacing: 2px;
 }
 
+/* Gothic Radio Options Container */
+.radio-group {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 250px;
+margin: 25px auto;
+gap: 15px;
+}
+
+.radio-label {
+font-size: 1.2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 10px;
+user-select: none;
+}
+
+/* Vampire Styled Radio Buttons */
+.radio-label input[type="radio"] {
+appearance: none;
+-webkit-appearance: none;
+width: 16px;
+height: 16px;
+border: 2px solid var(--vamp-red);
+background-color: #000;
+cursor: pointer;
+display: inline-block;
+position: relative;
+transform: rotate(45deg); /* Sharp diamond shapes */
+transition: all 0.2s;
+}
+
+.radio-label input[type="radio"]:checked {
+background-color: var(--neon-glow);
+box-shadow: 0 0 8px var(--neon-glow);
+border-color: #fff;
+}
+
 .gate-btn {
 font-family: 'IM Fell English', serif;
 background-color: var(--vamp-red);
 color: white;
 border: 1px solid #ff3333;
-padding: 12px 30px;
+padding: 12px 40px;
 font-size: 1.2rem;
 cursor: pointer;
-margin-top: 20px;
+margin-top: 10px;
 transition: all 0.3s;
-border-radius: 4px;
+clip-path: polygon(0 15%, 100% 0, 95% 100%, 5% 85%);
 }
 
 .gate-btn:hover {
@@ -95,16 +134,16 @@ margin-bottom: 40px;
 .profile-img {
 width: 110px;
 height: 110px;
-border-radius: 50%;
 object-fit: cover;
 border: 2px solid var(--vamp-red);
 box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
 h1 {
-font-size: 2rem;
+font-size: 2.5rem;
 margin: 15px 0 5px 0;
-letter-spacing: 1px;
+letter-spacing: 2px;
 text-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
 }
 
@@ -120,37 +159,42 @@ width: 100%;
 max-width: 420px;
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 15px;
 }
 
-/* Button Glow & Gothic Boxes */
+/* Sharp, Jagged Punk Gothic Boxes */
 .link-btn {
 background-color: var(--card-bg);
 color: var(--text-color);
 text-decoration: none;
 text-align: center;
-padding: 18px;
-border-radius: 6px;
+padding: 20px;
 font-size: 1.25rem;
 letter-spacing: 1px;
-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+transition: all 0.2s ease-in-out;
 border: 1px solid var(--vamp-red);
 cursor: pointer;
-box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 user-select: none;
+
+/* Tattered / ripped paper shape */
+clip-path: polygon(
+0% 8%, 15% 0%, 35% 6%, 55% 1%, 75% 8%, 88% 2%, 100% 10%,
+98% 35%, 100% 60%, 97% 85%, 100% 95%,
+85% 100%, 65% 94%, 45% 98%, 20% 92%, 0% 100%,
+2% 70%, 0% 45%, 3% 20%
+);
 }
 
-/* Neon Crimson Hover Effect */
+/* Intense Glowing Asymmetrical Neon Crimson Hover Effect */
 .link-btn:hover {
-border-color: var(--neon-glow);
-box-shadow: 0 0 20px 5px var(--neon-glow), inset 0 0 8px rgba(255, 0, 0, 0.3);
+background-color: #1a0808;
+filter: drop-shadow(0px 0px 12px var(--neon-glow));
 text-shadow: 0 0 5px #fff;
-transform: translateY(-2px);
+transform: scale(1.02) rotate(0.5deg);
 }
 
-/* Active click neon punch */
 .link-btn:active {
-box-shadow: 0 0 30px 10px var(--neon-glow);
+filter: drop-shadow(0px 0px 22px var(--neon-glow));
 transform: scale(0.98);
 }
 </style>
@@ -161,16 +205,27 @@ transform: scale(0.98);
 <div id="age-gate">
 <div class="gate-box">
 <div class="gate-title">Restricted Territory</div>
-<p>You must be 18 years of age or older to enter this domain. Proceed only if you are of legal adult age.</p>
-<button class="gate-btn" onclick="grantEntry()">I am 18 or older</button>
+<p>This domain contains adult material. Please verify your age to proceed.</p>
+
+<!-- Custom Styled Radio Selections -->
+<div class="radio-group">
+<label class="radio-label">
+<input type="radio" name="age-verify" value="yes"> YES, I am 18 or older.
+</label>
+<label class="radio-label">
+<input type="radio" name="age-verify" value="no"> NO, I am under 18.
+</label>
+</div>
+
+<button class="gate-btn" onclick="verifyAge()">Enter</button>
 </div>
 </div>
 
 <!-- Main Content -->
 <div class="profile">
 <img class="profile-img" src="https://unsplash.com" alt="Vampire Profile">
-<h1>@YourUsername</h1>
-<p class="bio">Welcome to the dark side of the web.</p>
+<h1>Nyx</h1>
+<p class="bio">All my spooOoky links!</p>
 </div>
 
 <!-- Scrambled links triggered strictly via real click events to evade crawlers -->
@@ -182,19 +237,31 @@ transform: scale(0.98);
 </div>
 
 <script>
-// Simple 18+ Access Control
-function grantEntry() {
-document.getElementById('age-gate').style.display = 'none';
+// Advanced Age Verification Handler
+function verifyAge() {
+const selectedOption = document.querySelector('input[name="age-verify"]:checked');
+
+if (!selectedOption) {
+alert("Please make a selection to proceed.");
+return;
 }
 
-// Anti-Crawler Security Decryptor (Base64 Decoding on Intentional Click)
+if (selectedOption.value === "yes") {
+// Grant access
+document.getElementById('age-gate').style.display = 'none';
+} else {
+// Throw underaged users/bots immediately out to Google
+window.location.href = "https://google.com";
+}
+}
+
+// Anti-Crawler Security Decryptor (Base64 Decoding)
 function unveilLink(scrambledToken) {
-// Web crawlers looking at the plain HTML source will only find the alphanumeric string hashes.
-// It only evaluates to your true target location when a client executes a literal pointer tap.
 const verifiedUrl = atob(scrambledToken);
 window.open(verifiedUrl, '_blank');
 }
 </script>
 </body>
 </html>
+
 
