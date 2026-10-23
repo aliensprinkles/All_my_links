@@ -135,9 +135,6 @@ margin-bottom: 40px;
 width: 110px;
 height: 110px;
 object-fit: cover;
-border: 2px solid var(--vamp-red);
-box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
 h1 {
@@ -151,7 +148,6 @@ text-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
 font-size: 1.2rem;
 color: #ffffff;
 margin: 0;
-font-style: italic;
 }
 
 .links-container {
@@ -159,11 +155,21 @@ width: 100%;
 max-width: 420px;
 display: flex;
 flex-direction: column;
-gap: 15px;
+gap: 25px;
 }
 
+  .glow-wrapper {
+    position: relative;
+    filter: drop-shadow(0px 0px 5px var(--vamp-red));
+    transition: filter 0.3s ease;
+  }
+    .glow-wrapper:hover {
+      filter: drop-shadow(0px 0px 12px var(--neon-glow)) drop-shadow(0px 0px 25px #ff3333);
+    }
+      
 /* Sharp, Jagged Punk Gothic Boxes */
 .link-btn {
+  display: block;
 background-color: var(--card-bg);
 color: var(--text-color);
 text-decoration: none;
@@ -171,10 +177,10 @@ text-align: center;
 padding: 20px;
 font-size: 1.25rem;
 letter-spacing: 1px;
-border: 1px solid var(--vamp-red);
 cursor: pointer;
 user-select: none;
-
+border: 2px solid var(--vamp-red);
+  
 /* Tattered / ripped paper shape */
 clip-path: polygon(
 0% 8%, 15% 0%, 35% 6%, 55% 1%, 75% 8%, 88% 2%, 100% 10%,
@@ -182,12 +188,11 @@ clip-path: polygon(
 85% 100%, 65% 94%, 45% 98%, 20% 92%, 0% 100%,
 2% 70%, 0% 45%, 3% 20%
 );
-  filter: drop-shadow(0px 0px 4px var(--vamp-red));
-  transition: filter 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Intense Glowing Asymmetrical Neon Crimson Hover Effect */
-.link-btn:hover {
+.glow-wrapper:hover .link-btn {
 background-color: #240909;
   border-color: var(--neon-glow);
 filter: drop-shadow(0px 0px 10px var(--neon-glow)) drop-shadow(0px 0px 22px #ff3333);
@@ -195,8 +200,7 @@ text-shadow: 0 0 8px #fff, 0 0 15px var(--neon-glow);
 transform: scale(1.02) rotate(0.5deg);
 }
 
-.link-btn:active {
-filter: drop-shadow(0px 0px 25px var(--neon-glow));
+.glow-wrapper:active .link-btn {
 transform: scale(0.98);
 }
 </style>
