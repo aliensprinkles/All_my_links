@@ -40,7 +40,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: #030007;
+background-color: #020601;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -52,11 +52,11 @@ box-sizing: border-box;
 }
 
 .gate-box {
-background-color: var(--card-bg);
-border: 2px solid var(--border-purple);
+background-color: #061404;
+border: 2px solid #1e5c12;
 padding: 40px;
 max-width: 450px;
-box-shadow: 0 0 25px rgba(74, 14, 128, 0.6);
+box-shadow: 0 0 25px rgba(43, 240, 8, 0.25);
 clip-path: polygon(2% 0%, 95% 4%, 100% 0%, 97% 45%, 100% 95%, 50% 97%, 3% 100%, 0% 70%, 2% 25%);
 }
 
@@ -66,8 +66,15 @@ color: var(--slime-green);
 margin-top: 0;
 text-transform: uppercase;
 letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--toxic-glow);
 }
 
+.gate-box p {
+  color: #a4c99e;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+  
 /* Gothic Radio Options Container */
 .radio-group {
 display: flex;
@@ -85,7 +92,7 @@ display: flex;
 align-items: center;
 gap: 10px;
 user-select: none;
-  color: #d1bfff;
+  color: #bbf2b3;
 }
 
 /* Vampire Styled Radio Buttons */
@@ -94,8 +101,8 @@ appearance: none;
 -webkit-appearance: none;
 width: 16px;
 height: 16px;
-border: 2px solid var(--border-purple);
-background-color: #05000a;
+border: 2px solid #299e19;
+background-color: #030d02;
 cursor: pointer;
 display: inline-block;
 position: relative;
@@ -106,12 +113,12 @@ transition: all 0.2s;
 .radio-label input[type="radio"]:checked {
 background-color: var(--slime-green);
 box-shadow: 0 0 8px var(--slime-green);
-border-color: #fff;
+border-color: #ffffff;
 }
 
 .gate-btn {
 font-family: 'IM Fell English', serif;
-background-color: #3d0566;
+background-color: #0f3309;
 color: white;
 border: 1px solid var(--slime-green);
 padding: 12px 40px;
@@ -123,9 +130,10 @@ clip-path: polygon(0 15%, 100% 0, 95% 100%, 5% 85%);
 }
 
 .gate-btn:hover {
-background-color: var(--border-purple);
-box-shadow: 0 0 15px var(--slime-green);
-  color: var(--slime-green);
+background-color: var(--slime-green);
+box-shadow: 0 0 15px var(--toxic-glow);
+  color: #020601;
+  border-color: #ffffff;
 }
 
 /* Main Content Styling */
