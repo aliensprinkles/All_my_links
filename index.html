@@ -171,7 +171,7 @@ text-align: center;
 padding: 20px;
 font-size: 1.25rem;
 letter-spacing: 1px;
-transition: all 0.2s ease-in-out;
+transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 border: 1px solid var(--vamp-red);
 cursor: pointer;
 user-select: none;
@@ -183,13 +183,14 @@ clip-path: polygon(
 85% 100%, 65% 94%, 45% 98%, 20% 92%, 0% 100%,
 2% 70%, 0% 45%, 3% 20%
 );
+  filter: drop-shadow(0px 0px 4px var(--vamp-red));
 }
 
 /* Intense Glowing Asymmetrical Neon Crimson Hover Effect */
 .link-btn:hover {
 background-color: #240909;
   border-color: var(--neon-glow);
-filter: drop-shadow(0px 0px 8px var(--neon-glow)) drop-shadow(0px 0px 20px #ff3333);
+filter: drop-shadow(0px 0px 10px var(--neon-glow)) drop-shadow(0px 0px 22px #ff3333);
 text-shadow: 0 0 8px #fff, 0 0 15px var(--neon-glow);
 transform: scale(1.02) rotate(0.5deg);
 }
@@ -224,7 +225,7 @@ transform: scale(0.98);
 
 <!-- Main Content -->
 <div class="profile">
-<img class="profile-img" src="logo.png" alt="Vampire Profile">
+<img class="profile-img" src="logo.png.png" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
 <h1>Nyx</h1>
 <p class="bio">All my spooOoky links!</p>
 </div>
