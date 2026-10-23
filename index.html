@@ -23,7 +23,6 @@
 
 body {
 font-family: 'IM Fell English', serif;
-background-color: var(--bg-color);
 color: var(--text-color);
 display: flex;
 flex-direction: column;
@@ -31,6 +30,9 @@ align-items: center;
 padding: 40px 20px;
 margin: 0;
 min-height: 100vh;
+  box-sizing: border-box;
+  background-image: radial-graadient(circle, var(--bg-color) 40%, #051802 75%, rgba(57, 255, 20, 0.15) 100%);
+  background-attachment: fixed;
 }
 
 /* 18+ Age Gate Overlay with Jagged Theme */
@@ -143,7 +145,7 @@ margin-bottom: 40px;
 }
 
 .profile-img {
-width: 150px;
+width: 145px;
 height: 110px;
 }
 
@@ -232,8 +234,8 @@ transform: scale(0.97);
 <!-- Main Content -->
 <div class="profile">
 <img class="profile-img" src="logo.png" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
-<h1>Nyx ⏾</h1>
-<p class="bio">⋆⁺₊⋆ All my spoOoOoky links! ⋆⁺₊⋆</p>
+<h1>⏾ Nyx ⏾</h1>
+<p class="bio">All my spoOoOoky links!</p>
 </div>
 
 <!-- Scrambled links triggered strictly via real click events to evade crawlers -->
@@ -241,7 +243,7 @@ transform: scale(0.97);
 <div class="link-btn" onclick="unveilLink('aHR0cHM6Ly9lbmNvdW50ZXJzb2Z0aGVueXhraW5kLmNvbQ==')">My Website</div>
 <div class="link-btn" onclick="unveilLink('aHR0cHM6Ly9vbmx5ZmFucy5jb20vYWxpZW4uc3ByaW5rbGVz')">OnlyFangs</div>
 <div class="link-btn" onclick="unveilLink('aHR0cHM6Ly90cnlzdC5saW5rL2VzY29ydC9hbGllbi1zcHJpbmtsZXM=')">Ad Site</div>
-<div class="link-btn" onclick="unveilLink('aHR0cHM6Ly94LmNvbS9hbGllbl9zcHJpbmtsZXM=')"> X / Twitter</div>
+<div class="link-btn" onclick="unveilLink('aHR0cHM6Ly94LmNvbS9hbGllbl9zcHJpbmtsZXM=')">Twitter</div>
 </div>
 
 <script>
