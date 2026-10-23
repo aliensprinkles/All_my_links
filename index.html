@@ -13,11 +13,12 @@
 
 <style>
 :root {
---bg-color: #080303;
---card-bg: #120505;
+--bg-color: #080110;
+--card-bg: #16022b;
 --text-color: #ffffff;
---vamp-red: #8b0000;
---neon-glow: #ff0000;
+--slime-green: #39ff14; /*FORMERLY VAMP-RED*/
+--toxic-glow: #2bf008; /*FORMERLY NEON-GLOW*/
+  --border-purple: #4a0e80
 }
 
 body {
@@ -39,7 +40,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: #000000;
+background-color: #030007;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -52,16 +53,16 @@ box-sizing: border-box;
 
 .gate-box {
 background-color: var(--card-bg);
-border: 2px solid var(--vamp-red);
+border: 2px solid var(--border-purple);
 padding: 40px;
 max-width: 450px;
-box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+box-shadow: 0 0 25px rgba(74, 14, 128, 0.6);
 clip-path: polygon(2% 0%, 95% 4%, 100% 0%, 97% 45%, 100% 95%, 50% 97%, 3% 100%, 0% 70%, 2% 25%);
 }
 
 .gate-title {
 font-size: 2rem;
-color: var(--neon-glow);
+color: var(--slime-green);
 margin-top: 0;
 text-transform: uppercase;
 letter-spacing: 2px;
@@ -84,6 +85,7 @@ display: flex;
 align-items: center;
 gap: 10px;
 user-select: none;
+  color: #d1bfff;
 }
 
 /* Vampire Styled Radio Buttons */
@@ -92,8 +94,8 @@ appearance: none;
 -webkit-appearance: none;
 width: 16px;
 height: 16px;
-border: 2px solid var(--vamp-red);
-background-color: #000;
+border: 2px solid var(--border-purple);
+background-color: #05000a;
 cursor: pointer;
 display: inline-block;
 position: relative;
@@ -102,16 +104,16 @@ transition: all 0.2s;
 }
 
 .radio-label input[type="radio"]:checked {
-background-color: var(--neon-glow);
-box-shadow: 0 0 8px var(--neon-glow);
+background-color: var(--slime-green);
+box-shadow: 0 0 8px var(--slime-green);
 border-color: #fff;
 }
 
 .gate-btn {
 font-family: 'IM Fell English', serif;
-background-color: var(--vamp-red);
+background-color: #3d0566;
 color: white;
-border: 1px solid #ff3333;
+border: 1px solid var(--slime-green);
 padding: 12px 40px;
 font-size: 1.2rem;
 cursor: pointer;
@@ -121,8 +123,9 @@ clip-path: polygon(0 15%, 100% 0, 95% 100%, 5% 85%);
 }
 
 .gate-btn:hover {
-background-color: #ff0000;
-box-shadow: 0 0 15px var(--neon-glow);
+background-color: var(--border-purple);
+box-shadow: 0 0 15px var(--slime-green);
+  color: var(--slime-green);
 }
 
 /* Main Content Styling */
@@ -134,19 +137,19 @@ margin-bottom: 40px;
 .profile-img {
 width: 110px;
 height: 110px;
-object-fit: cover;
 }
 
 h1 {
-font-size: 2.5rem;
+font-size: 2.7rem;
 margin: 15px 0 5px 0;
 letter-spacing: 2px;
-text-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
+  color: var(--slime-green);
+text-shadow: 0 0 10px var(--toxic-glow);
 }
 
 .bio {
 font-size: 1.2rem;
-color: #ffffff;
+color: #a38fcc;
 margin: 0;
 }
 
@@ -157,16 +160,6 @@ display: flex;
 flex-direction: column;
 gap: 25px;
 }
-
-  .glow-wrapper {
-    position: relative;
-    filter: drop-shadow(0px 0px 5px var(--vamp-red));
-    transition: filter 0.3s ease;
-    will-change: filter;
-  }
-    .glow-wrapper:hover {
-      filter: drop-shadow(0px 0px 12px var(--neon-glow)) drop-shadow(0px 0px 25px #ff3333);
-    }
       
 /* Sharp, Jagged Punk Gothic Boxes */
 .link-btn {
@@ -176,11 +169,11 @@ color: var(--text-color);
 text-decoration: none;
 text-align: center;
 padding: 20px;
-font-size: 1.25rem;
+font-size: 1.3rem;
 letter-spacing: 1px;
 cursor: pointer;
 user-select: none;
-border: 2px solid var(--vamp-red);
+border: 2px solid var(--border-purple);
   
 /* Tattered / ripped paper shape */
 clip-path: polygon(
@@ -192,17 +185,17 @@ clip-path: polygon(
   transition: all 0.3s ease;
 }
 
-/* Intense Glowing Asymmetrical Neon Crimson Hover Effect */
-.glow-wrapper:hover .link-btn {
-background-color: #240909;
-  border-color: var(--neon-glow);
-filter: drop-shadow(0px 0px 10px var(--neon-glow)) drop-shadow(0px 0px 22px #ff3333);
-text-shadow: 0 0 8px #fff, 0 0 15px var(--neon-glow);
-transform: scale(1.02) rotate(0.5deg);
+/* hover transition */
+.link-btn:hover {
+background-color: #26004d;
+  border-color: var(--slime-green);
+  color: var(--slime-green);
+  text-shadow: 0 0 8px var(--slime-green), 0 0 15px var(--toxic-glow);
+  transform: scale(1.03) rotate(0.5deg);
 }
 
-.glow-wrapper:active .link-btn {
-transform: scale(0.98);
+.link-btn:active {
+transform: scale(0.97);
 }
 </style>
 </head>
