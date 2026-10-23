@@ -148,8 +148,8 @@ text-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
 }
 
 .bio {
-font-size: 1.1rem;
-color: #b09e9e;
+font-size: 1.2rem;
+color: #ffffff;
 margin: 0;
 font-style: italic;
 }
@@ -187,14 +187,15 @@ clip-path: polygon(
 
 /* Intense Glowing Asymmetrical Neon Crimson Hover Effect */
 .link-btn:hover {
-background-color: #1a0808;
-filter: drop-shadow(0px 0px 12px var(--neon-glow));
-text-shadow: 0 0 5px #fff;
+background-color: #240909;
+  border-color: var(--neon-glow);
+filter: drop-shadow(0px 0px 8px var(--neon-glow)) drop-shadow(0px 0px 20px #ff3333);
+text-shadow: 0 0 8px #fff, 0 0 15px var(--neon-glow);
 transform: scale(1.02) rotate(0.5deg);
 }
 
 .link-btn:active {
-filter: drop-shadow(0px 0px 22px var(--neon-glow));
+filter: drop-shadow(0px 0px 25px var(--neon-glow));
 transform: scale(0.98);
 }
 </style>
@@ -204,8 +205,8 @@ transform: scale(0.98);
 <!-- Age Gate Modal Overlay -->
 <div id="age-gate">
 <div class="gate-box">
-<div class="gate-title">Restricted Territory</div>
-<p>This domain contains adult material. Please verify your age to proceed.</p>
+<div class="gate-title">Age Verification</div>
+<p>This site contains adult material. Please verify your age to proceed. Nobody under 18 may enter. (In other words, NO YOUNGINS ALLOWED!)</p>
 
 <!-- Custom Styled Radio Selections -->
 <div class="radio-group">
@@ -223,7 +224,7 @@ transform: scale(0.98);
 
 <!-- Main Content -->
 <div class="profile">
-<img class="profile-img" src="https://unsplash.com" alt="Vampire Profile">
+<img class="profile-img" src="logo.png" alt="Vampire Profile">
 <h1>Nyx</h1>
 <p class="bio">All my spooOoky links!</p>
 </div>
