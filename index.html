@@ -395,19 +395,15 @@ activeDoomSound.pause();
  }
   }
 
-  function playDoomSound() {
+function playDoomSound() {
 stopActiveSound();
-    
-  const randomRoll = Math.floor(Math.random() * 18) + 1;
+const randomRoll = Math.floor(Math.random() * 18) + 1;
 const selectedSound = document.getElementById('doom-sound-' + randomRoll);
   
   if (selectedSound) {
     activeDoomSound = selectedSound;
-    
     selectedSound.currentTime = 0;
-  selectedSound.play().catch(err => {
-    console.log("Audio playback was blocked or failed"), err);
-  });
+    selectedSound.play();
   }
   }
   
