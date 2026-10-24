@@ -166,17 +166,22 @@ margin-bottom: 40px;
 
 .profile-img {
   width: 140px;
-height: 140px;
-object-fit: cover;
-display: inline-block;
+height: auto;
+  max-width: 100%;
+object-fit: contain;
+border: 2px rgba(43, 240, 8, 1);
+  border-radius: 0px;
 filter: drop-shadow(0px 0px 20px var(--toxic-glow));
 }
 
 /* Bottom GIF Style - Sharp, Jagged Punk Cutout Mask */
 .footer-gif {
-width: 140px;
-height: 140px;
-object-fit: cover;
+  width: 140px;
+height: auto;
+  max-width: 100%;
+object-fit: contain;
+border: 2px rgba(43, 240, 8, 1);
+  border-radius: 0px;
 display: inline-block;
   padding: 10px;
   background-color: var(--toxic-glow);
