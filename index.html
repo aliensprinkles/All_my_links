@@ -386,7 +386,10 @@ function unveilLink(scrambledToken) {
   stopActiveSound();
 const verifiedUrl = atob(scrambledToken);
   setTimeout(function() {
-    window.open(verifiedUrl, '_blank');
+   const newWindow = window.open(verifiedUrl, '_blank');
+    if (newWindow) {
+      newWindow.opener = null;
+    }
   }, 200);
 }
   
