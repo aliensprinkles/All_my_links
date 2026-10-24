@@ -320,8 +320,10 @@ return;
 
 if (selectedOption.value === "yes") {
 // Grant access
+  setTimeout(function() {
 document.getElementById('age-gate').style.display = 'none';
-} else {
+}, 200);
+             } else {
 // Throw underaged users/bots immediately out to Google
 window.location.href = "https://google.com";
 }
