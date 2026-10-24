@@ -359,6 +359,9 @@ transform: scale(0.97);
   </footer>
 
 <script>
+  
+   let activeDoomSound = null;
+  
 // Advanced Age Verification Handler
 function verifyAge() {
 const selectedOption = document.querySelector('input[name="age-verify"]:checked');
@@ -387,14 +390,14 @@ const verifiedUrl = atob(scrambledToken);
     window.open(verifiedUrl, '_blank');
   }, 200);
 }
-
+  
   function stopActiveSound() {
  if (activeDoomSound) {
 activeDoomSound.pause();
    activeDoomSound.currentTime = 0;
  }
   }
-
+  
 function playDoomSound() {
 stopActiveSound();
 const randomRoll = Math.floor(Math.random() * 18) + 1;
