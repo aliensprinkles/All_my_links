@@ -42,7 +42,13 @@ min-height: 100vh;
     font-family: 'Creepster', system--ui;
     font-size: 2rem;
     color: var(--slime-green);
-    text-shadow: 0 0 10px var(--toxic-glow);
+    text-shadow:
+  -2px -2px 0px #020601,
+   2px -2px 0px #020601,
+   -2px 2px 0px #020601,
+   2px 2px 0px #020601,
+  0 0 12px var(--toxic-glow), 
+  0 0 18px rgba(57, 255, 20, 0.5);
     margin-top: 50px;
     margin-bottom: 15px;
     text-align: center;
@@ -214,7 +220,13 @@ margin: 15px 0 5px 0;
 letter-spacing: 2px;
   color: var(--slime-green) !important;
   display: block !important;
-text-shadow: 0 0 10px var(--toxic-glow), 0 0 12px rgba(57, 255, 20, 0.4);
+text-shadow:
+  -2px -2px 0px #020601,
+   2px -2px 0px #020601,
+   -2px 2px 0px #020601,
+   2px 2px 0px #020601,
+  0 0 12px var(--toxic-glow), 
+  0 0 18px rgba(57, 255, 20, 0.5);
 }
 
 .bio {
@@ -222,8 +234,8 @@ text-shadow: 0 0 10px var(--toxic-glow), 0 0 12px rgba(57, 255, 20, 0.4);
   font-weight: 400;
 font-size: 1.5rem;
 color: #a4c99e;
-margin-top: 10px;
-  margin-bottom: 10px;
+margin-top: 20px;
+  margin-bottom: 20px;
   text-decoration: underline;
   text-decoration-color: #299e19;
   text-decoration-style: dashed;
@@ -244,6 +256,8 @@ gap: 25px;
  font-family: 'IM Fell English SC', serif;
   font-weight: 400;
   display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 background-color: #0c2608;
 color: #C9FFC1;
 text-align: center;
@@ -252,7 +266,7 @@ font-size: 1.7rem;
 letter-spacing: 1px;
 cursor: pointer;
 user-select: none;
-border: 6px solid #1e5c12;
+border: 7px solid #1e5c12;
   
 /* Tattered / ripped paper shape */
 clip-path: polygon(
