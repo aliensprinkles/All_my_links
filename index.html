@@ -124,9 +124,9 @@ height: 16px;
 border: 2px solid #299e19;
 background-color: #030d02;
 cursor: pointer;
-display: inline-flex;
-  align-items: center;
-position: relative;
+display: inline-flex !important;
+  align-items: center !important;
+justify-content: center !important;
 transform: rotate(45deg); /* Sharp diamond shapes */
 transition: all 0.2s;
   outline: none;
@@ -134,19 +134,21 @@ transition: all 0.2s;
 
 .radio-label input[type="radio"]::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 100%;
+  height: 100%;
 background-color: transparent;
   transition: background-color 0.2s;
+  transform: scale(0);
 }
   
 .radio-label input[type="radio"]:checked {
-box-shadow: 0 0 8px var(--slime-green);
+box-shadow: 0 0 12px var(--slime-green);
 border-color: #ffffff;
 }
 
 .radio-label input[type="radio"]:checked::before {
 background-color: var(--slime-green);
+  transform: scale(0.65);
 }
   
 .gate-btn {
