@@ -165,7 +165,11 @@ margin-bottom: 40px;
 }
 
 .profile-img {
-filter: drop-shadow(3px 3px 8px var(--slime-green));
+  width: 140px;
+height: 140px;
+object-fit: cover;
+display: inline-block;
+filter: drop-shadow(0px 0px 20px var(--toxic-glow));
 }
 
 /* Bottom GIF Style - Sharp, Jagged Punk Cutout Mask */
@@ -175,7 +179,7 @@ height: 140px;
 object-fit: cover;
 display: inline-block;
   padding: 10px;
-  background-color: var(--slime-green);
+  background-color: var(--toxic-glow);
 
 /* Slices the animated GIF down in the footer into tattered paper shards */
 clip-path: polygon(
@@ -198,11 +202,15 @@ text-shadow: 0 0 10px var(--toxic-glow), 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
 .bio {
-   font-family: 'Almendra', serif;
-  font-weight: 700;
+   font-family: 'IM Fell English SC', serif;
+  font-weight: 400;
 font-size: 1.2rem;
 color: #a4c99e;
-margin: 0;
+margin: 5px;
+  text-decoration: underline;
+  text-decoration-color: var(--slime-green);
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
 }
 
 .links-container {
@@ -220,7 +228,6 @@ gap: 25px;
   display: block;
 background-color: #0c2608;
 color: #C9FFC1;
-text-decoration: none;
 text-align: center;
 padding: 20px;
 font-size: 1.7rem;
@@ -244,7 +251,7 @@ clip-path: polygon(
 background-color: #0f3309;
   border-color: var(--slime-green);
   color: var(--slime-green);
-  text-shadow: 0 0 8px var(--slime-green), 0 0 15px var(--toxic-glow);
+  text-shadow: 0 0 8px var(--slime-green);
   transform: scale(1.03) rotate(0.5deg);
 }
 
@@ -277,9 +284,9 @@ transform: scale(0.97);
 
 <!-- Main Content -->
 <div class="profile">
-<img class="profile-img" src="logo.png"  style="width: 145px; height: 140; filter: drop-shadow(0 0 7px var(--green-slime));" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
+<img class="profile-img" src="logo.png"  style="width: 140px; height: 140; filter: drop-shadow(0 0 20px var(--toxic-glow));" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
 <h1>⏾ NYX ⏾</h1>
-  <p class="bio">All my spooOoOoky links!</p>
+  <p class="bio">Behold!...All my spooOoOoky links! ₊‧⁺˖⋆</p>
 </div>
 
 <!-- Scrambled links triggered strictly via real click events to evade crawlers -->
