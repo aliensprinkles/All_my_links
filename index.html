@@ -37,7 +37,17 @@ min-height: 100vh;
   background-image: radial-gradient(circle, #020601 40%, #061404 60%, rgba(57, 255, 20, 0.35) 130%);
   background-attachment: fixed;
 }
-
+  
+  .doom-warning {
+    font-family: 'Creepster', system--ui;
+    font-szie: 2rem;
+    color: var(--slime-green);
+    text-shadow: 0 0 10px var(--toxic-glow);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
 /* 18+ Age Gate Overlay with Jagged Theme */
 #age-gate {
 position: fixed;
@@ -303,6 +313,13 @@ transform: scale(0.97);
   <div class="link-btn" onclick="unveilLink('aHR0cHM6Ly93d3cucmVkZGl0LmNvbS91L2FsaWVuX3Nwcmlua2xlc3g')">✩ Reddit ✩</div>
 </div>
 
+  <h2 class="doom-warning">You wouldn't dare click this!...</h2>
+  <div class="link-btn" style="max-width: 420px; width: 100%; margin-bottom: 20px;" onclick="playDoomSound()">☠︎︎ Button of DOOM ☠︎︎</div>
+  <audio id="doom-sound-1" src="https://www.myinstants.com/media/sounds/zab-zab-zab-bla-bla-blu-blu-alien-tiktok-meme.mp3"></audio>
+ <audio id="doom-sound-2" src="https://www.myinstants.com/media/sounds/zeep-glorp-green-alien-cat-meme.mp3"></audio>
+ <audio id="doom-sound-3" src="https://www.myinstants.com/media/sounds/pingas-richard-89282878.mp3"></audio>
+  <audio id="doom-sound-4" src="https://www.myinstants.com/media/sounds/why-are-you-geh.mp3"></audio>
+
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
     <p class="bio">⋆˖⁺₊☽◯☾₊‧⁺˖⋆</p>
@@ -336,6 +353,16 @@ const verifiedUrl = atob(scrambledToken);
     window.open(verifiedUrl, '_blank');
   }, 200);
 }
+  function playDoomSound() {
+  const randomRoll = Math.floor(Math.random() * 4) + 1;
+const selectedSound = document.getElementById('doom-sound-' + randomRoll);
+  
+  if (selectedSound) {
+    selectedSound.currentTime = 0;
+  selectedSound.play();
+  }
+  }
+  
 </script>
 </body>
 </html>
