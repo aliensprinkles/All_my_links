@@ -322,6 +322,8 @@ transform: scale(0.97);
  <audio id="doom-sound-2" src="https://www.myinstants.com/media/sounds/zeep-glorp-green-alien-cat-meme.mp3"></audio>
  <audio id="doom-sound-3" src="https://www.myinstants.com/media/sounds/pingas-richard-89282878.mp3"></audio>
   <audio id="doom-sound-4" src="https://www.myinstants.com/media/sounds/why-are-you-geh.mp3"></audio>
+<audio id="doom-sound-4" src="https://www.myinstants.com/media/sounds/i-have-a-mighty-need.mp3"></audio>
+  
 
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
@@ -357,7 +359,7 @@ const verifiedUrl = atob(scrambledToken);
   }, 200);
 }
   function playDoomSound() {
-  const randomRoll = Math.floor(Math.random() * 4) + 1;
+  const randomRoll = Math.floor(Math.random() * 5) + 1;
 const selectedSound = document.getElementById('doom-sound-' + randomRoll);
   
   if (selectedSound) {
