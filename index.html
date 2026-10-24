@@ -40,7 +40,7 @@ min-height: 100vh;
   
   .doom-warning {
     font-family: 'Creepster', system--ui;
-    font-szie: 2rem;
+    font-size: 2rem;
     color: var(--slime-green);
     text-shadow: 0 0 10px var(--toxic-glow);
     margin-top: 50px;
@@ -367,18 +367,33 @@ window.location.href = "https://google.com";
 
 // Anti-Crawler Security Decryptor (Base64 Decoding)
 function unveilLink(scrambledToken) {
+  stopActiveSound();
 const verifiedUrl = atob(scrambledToken);
   setTimeout(function() {
     window.open(verifiedUrl, '_blank');
   }, 200);
 }
+
+  function stopActiveSound() {
+ if (activeDoomSound) {
+activeDoomSound.pause();
+   activeDoomSound.currentTime = 0;
+ }
+  }
+
   function playDoomSound() {
+stopActiveSound();
+    
   const randomRoll = Math.floor(Math.random() * 18) + 1;
 const selectedSound = document.getElementById('doom-sound-' + randomRoll);
   
   if (selectedSound) {
+    activeDoomSound = selectedSound;
+    
     selectedSound.currentTime = 0;
-  selectedSound.play();
+  selectedSound.play().catch(err => {
+    console.log("Audio playback was blocked or failed"), err);
+  });
   }
   }
   
