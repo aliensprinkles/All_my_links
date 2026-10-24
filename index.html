@@ -8,8 +8,11 @@
 
 <!-- Import Gothic Font -->
 <link href="https://googleapis.com" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Creepster&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=VT323&display=swap" rel="stylesheet">
 <style>
+
 :root {
 --bg-color: #020601;
 --card-bg: #061404;
@@ -20,7 +23,8 @@
 }
 
 body {
-font-family: 'IM Fell English', serif;
+  font-family: 'Almendra', serif;
+  font-weight: 400;
 color: var(--text-color);
 display: flex;
 flex-direction: column;
@@ -161,15 +165,13 @@ margin-bottom: 40px;
 }
 
 .profile-img {
-object-fit: cover;
-border: 2px rgba(0px 0px 8px var(--toxic-glow));
 filter: drop-shadow(0px 0px 8px var(--toxic-glow));
 }
 
 /* Bottom GIF Style - Sharp, Jagged Punk Cutout Mask */
 .footer-gif {
-width: 90px;
-height: auto;
+width: 110px;
+height: 110px;
 object-fit: cover;
 border: 2px solid var(--slime-green);
 display: inline-block;
