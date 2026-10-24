@@ -334,6 +334,10 @@ transform: scale(0.97);
  <audio id="doom-sound-13" src="https://www.myinstants.com/media/sounds/spongebob-disappointed-sound-effect.mp3"></audio>
   <audio id="doom-sound-14" src="https://www.myinstants.com/media/sounds/oh-brother-this-guy-stinks.mp3"></audio>
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
+<audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/plug.mp3"></audio>
+<audio id="doom-sound-17" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
+  <audio id="doom-sound-18" src="https://www.myinstants.com/media/sounds/anime-ahh.mp3"></audio>
+  
   
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
@@ -369,7 +373,7 @@ const verifiedUrl = atob(scrambledToken);
   }, 200);
 }
   function playDoomSound() {
-  const randomRoll = Math.floor(Math.random() * 15) + 1;
+  const randomRoll = Math.floor(Math.random() * 18) + 1;
 const selectedSound = document.getElementById('doom-sound-' + randomRoll);
   
   if (selectedSound) {
