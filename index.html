@@ -140,9 +140,9 @@ background-color: var(--slime-green);
   
 .gate-btn {
 font-family: 'IM Fell English SC', serif;
-background-color: #0f3309;
+background-color: var(--slime-green);
 color: white;
-border: 8px solid var(--slime-green);
+border: 8px solid var(--toxic-glow);
 padding: 12px 40px;
 font-size: 1.2rem;
 cursor: pointer;
@@ -154,6 +154,7 @@ clip-path: polygon(0 15%, 100% 0, 95% 100%, 5% 85%);
 .gate-btn:hover {
 background-color: var(--slime-green);
 box-shadow: 0 0 15px var(--toxic-glow);
+  filter: 10% brighten;
   color: #020601;
   border-color: #ffffff;
 }
