@@ -313,32 +313,6 @@ transform: scale(0.97);
     pointer-events: none !important;
     -webkit-user-drag: none !important;
 )
-    /* Starting State: Completely invisible and hidden from user views on page load */
-.doom-subtext {
-font-family: 'Almendra', serif !important;
-font-weight: 400 !important;
-font-size: 1.8rem !important;
-color: #a4c99e;
-text-align: center !important;
-margin-top: 15px;
-margin-bottom: 30px;
-max-width: 440px;
-width: 100%;
-text-decoration: none !important;
-opacity: 0 !important;
-  overflow: hidden !important;
-  max-height: 0px !important;
-  transition: opacity 1.5s ease-in-out, max-height 1s ease-in-out, margin 1s ease-in-out !important;
-}
-
-/* THE CSS TRIGGER: The exact millisecond your active audio-playing class or button container receives focus or gets clicked, this kicks off the animation curve natively */
-.doom-btn:active + .doom-subtext,
-.doom-btn:focus + .doom-subtext {
-  opacity: 1 !important;
-  max-height: 100px !important;
-  margin-top: 15px !important;
-  margin-bottom: 30px !important;
-}
     
 </style>
 </head>
@@ -384,6 +358,7 @@ opacity: 0 !important;
 
   <h2 class="doom-warning">You wouldn't dare click this...</h2>
   <button class="link-btn" style="max-width: 420px; width: 100%; margin-bottom: 20px;" onclick="playDoomSound()">☠︎︎ Button of DOOM ☠︎︎</button>
+  
   <audio id="doom-sound-1" src="https://www.myinstants.com/media/sounds/zab-zab-zab-bla-bla-blu-blu-alien-tiktok-meme.mp3"></audio>
  <audio id="doom-sound-2" src="https://www.myinstants.com/media/sounds/zeep-glorp-green-alien-cat-meme.mp3"></audio>
  <audio id="doom-sound-3" src="https://www.myinstants.com/media/sounds/pingas-richard-89282878.mp3"></audio>
@@ -402,7 +377,7 @@ opacity: 0 !important;
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
 <audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
   
-  <p class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again! >:0</p>
+  <p id="doom-subtext" stye="font-family: 'Almendra', serif !important; font-weight: 400 !important; font-size: 1.8rem !important; color: #a4c99e; text-align: center !important; margin-top: 15px; margin-bottom: 30px; max-width: 440px; width: 100%; text-decoration: none !important; opacity: 1 !important; !important;" class="doom-subtext">...And you DEFINITELY don't have the guts to press it again! >:0</p>
     
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
