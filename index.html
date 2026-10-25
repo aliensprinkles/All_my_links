@@ -207,6 +207,16 @@ object-fit: contain;
 filter: drop-shadow(0px 0px 20px var(--toxic-glow));
 }
 
+.footer-container (
+display: flex !important;
+  flex-direction: column !important;
+  align-items: cneter !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  margin: 40px auto 20px auto !important;
+  width: 100% !important;
+  )
+  
 /* Bottom GIF Style - Sharp, Jagged Punk Cutout Mask */
 .footer-gif {
   width: 140px;
@@ -234,7 +244,7 @@ height: auto;
   max-width: 100%;
 object-fit: contain;
   border-radius: 0px;
-display: inline-block;
+display: block;
   padding: 18px;
   background-color: #8028A0 !important;
 /* Slices the animated GIF down in the footer into tattered paper shards */
@@ -412,8 +422,10 @@ transform: scale(0.97);
   <h3>...and you DEFINITELY don't have the guts to keep pressing it! >:0</h3>
     
   <footer style="margin-top: 50px; text-align: center;">
+    <div class="footer-container">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
     <img class="footer-logo no-save" src="android-chrome-192x192.png" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
+    </div>
   </footer>
 
 <script>
