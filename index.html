@@ -452,11 +452,11 @@ const selectedSound = document.getElementById('doom-sound-' + randomRoll);
     activeDoomSound = selectedSound;
     selectedSound.currentTime = 0;
     selectedSound.play();
+  }
 
     document.getElementById('fade-subtext').classList.remove('hidden-text');
     if (textTarget) {
       textTarget.style.opacity = "1";
-  }
   }
   
 </script>
