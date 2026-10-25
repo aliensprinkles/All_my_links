@@ -317,7 +317,7 @@ transform: scale(0.97);
 .doom-subtext {
 font-family: 'Almendra', serif;
 font-weight: 400;
-font-size: 1.7rem;
+font-size: 1.8rem;
 color: #a4c99e;
 text-align: center;
 margin-top: 15px;
@@ -327,41 +327,20 @@ width: 100%;
 text-decoration: none !important;
 
 /* Starting invisible parameters */
-opacity: 0;
-visibility: hidden;
+opacity: 0 !important;
+  overflow: hidden;
+  max-height: 0px;
+  transition: opacity 1.5s ease-in, max-height 1s ease-in, margin 1s ease-in !important;
 }
 
 /* THE CSS TRIGGER: The exact millisecond your active audio-playing class or button container receives focus or gets clicked, this kicks off the animation curve natively */
 .doom-btn:active + .doom-subtext,
-.doom-btn:focus + .doom-subtext,
-.doom-subtext {
-/* Links your container to our keyframe engine below */
-animation: revealDoomText 1.5s ease-in-out forwards;
-
-/* Delayed start: waits 0.2 seconds so the text starts sliding open right after the click sound breaks */
-animation-delay: 0.2s;
-
-/* Keeps the text element from starting until a real user interaction event listener wakes it up */
-animation-play-state: paused;
-}
-
-/* Wakes the animation up instantly when the parent button element is targeted */
-.doom-btn:active + .doom-subtext {
-animation-play-state: running !important;
-}
-
-/* THE ANIMATION HARDWARE TIMELINE ROUTE */
-@keyframes revealDoomText {
-0% {
-opacity: 0;
-visibility: hidden;
-transform: translateY(-5px); /* Adds a subtle tattered drift upward effect */
-}
-100% {
-opacity: 1;
-visibility: visible;
-transform: translateY(0);
-}
+.doom-btn:focus + .doom-subtext, .doom-btn:active .doom-subtext,
+.doom-btn:focus .doom-subtext, .doom-btn:focus-within .doom-subtext {
+  opacity: 1 !important;
+  max-height: 100px !important;
+  margin-top: 15px !important;
+  margin-bottom: 30px !important;
 }
     
 </style>
@@ -407,7 +386,7 @@ transform: translateY(0);
 </div>
 
   <h2 class="doom-warning">You wouldn't dare click this...</h2>
-  <div class="link-btn" style="max-width: 420px; width: 100%; margin-bottom: 20px;" onclick="playDoomSound()">☠︎︎ Button of DOOM ☠︎︎</div>
+  <button class="link-btn" style="max-width: 420px; width: 100%; margin-bottom: 20px;" onclick="playDoomSound()">☠︎︎ Button of DOOM ☠︎︎</button>
   <audio id="doom-sound-1" src="https://www.myinstants.com/media/sounds/zab-zab-zab-bla-bla-blu-blu-alien-tiktok-meme.mp3"></audio>
  <audio id="doom-sound-2" src="https://www.myinstants.com/media/sounds/zeep-glorp-green-alien-cat-meme.mp3"></audio>
  <audio id="doom-sound-3" src="https://www.myinstants.com/media/sounds/pingas-richard-89282878.mp3"></audio>
@@ -426,7 +405,7 @@ transform: translateY(0);
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
 <audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
   
-  <p class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again! >:3</p>
+  <p class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again! >:0</p>
     
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
