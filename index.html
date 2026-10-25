@@ -318,9 +318,9 @@ transform: scale(0.97);
     }
     
     .doom-subtext {
-      font-family: 'IM Fell English SC', serif;
+      font-family: 'Almendra', sans-serif;
       font-weight: 400;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
       color: #a4c99e;
       text-align: center;
       margin-top: 15px;
@@ -393,7 +393,7 @@ transform: scale(0.97);
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
 <audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
   
-  <p id="fade-subtext" class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again!</p>
+  <p id="fade-subtext" class="doom-subtext"  style="opacity: 0;">...Yeah, well- you definitely don't have the guts to press it again!</p>
     
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
@@ -454,6 +454,8 @@ const selectedSound = document.getElementById('doom-sound-' + randomRoll);
     selectedSound.play();
 
     document.getElementById('fade-subtext').classList.remove('hidden-text');
+    if (textTarget) {
+      textTarget.style.opacity = "1";
   }
   }
   
