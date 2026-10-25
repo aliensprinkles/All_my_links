@@ -313,29 +313,56 @@ transform: scale(0.97);
     pointer-events: none !important;
     -webkit-user-drag: none !important;
 
-    .hidden-text {
-      opacity: 0 !important;
-      visibility: hidden !important;
-    }
+    /* Starting State: Completely invisible and hidden from user views on page load */
+.doom-subtext {
+font-family: 'Almendra', serif;
+font-weight: 400;
+font-size: 1.2rem;
+color: #a4c99e;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 30px;
+max-width: 420px;
+width: 100%;
+text-decoration: none !important;
 
-    .visible-text {
-opacity: 1 !important;
-      visibility: visible !important;
-    }
-    
-    .doom-subtext {
-      font-family: 'Almendra', sans-serif;
-      font-weight: 400;
-      font-size: 1.7rem;
-      color: #a4c99e;
-      text-align: center;
-      margin-top: 15px;
-      margin-bottom: 30px;
-      max-width: 420px;
-      width: 100%;
-      text-decoration: none !important;
-    transition: opacity 1.5s ease-in-out !important;
-    }
+/* Starting invisible parameters */
+opacity: 0;
+visibility: hidden;
+}
+
+/* THE CSS TRIGGER: The exact millisecond your active audio-playing class or button container receives focus or gets clicked, this kicks off the animation curve natively */
+.doom-btn:active + .doom-subtext,
+.doom-btn:focus + .doom-subtext,
+.doom-subtext {
+/* Links your container to our keyframe engine below */
+animation: revealDoomText 1.5s ease-in-out forwards;
+
+/* Delayed start: waits 0.2 seconds so the text starts sliding open right after the click sound breaks */
+animation-delay: 0.2s;
+
+/* Keeps the text element from starting until a real user interaction event listener wakes it up */
+animation-play-state: paused;
+}
+
+/* Wakes the animation up instantly when the parent button element is targeted */
+.doom-btn:active + .doom-subtext {
+animation-play-state: running !important;
+}
+
+/* THE ANIMATION HARDWARE TIMELINE ROUTE */
+@keyframes revealDoomText {
+0% {
+opacity: 0;
+visibility: hidden;
+transform: translateY(-5px); /* Adds a subtle tattered drift upward effect */
+}
+100% {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+}
     
 </style>
 </head>
@@ -399,7 +426,7 @@ opacity: 1 !important;
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
 <audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
   
-  <p id="fade-subtext" class="doom-subtext hidden-text">...Yeah, well- you definitely don't have the guts to press it again!</p>
+  <p class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again! >:3</p>
     
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
