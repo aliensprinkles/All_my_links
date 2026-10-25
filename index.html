@@ -312,6 +312,24 @@ transform: scale(0.97);
     user-select: none !important;
     pointer-events: none !important;
     -webkit-user-drag: none !important;
+
+    .hidden-text {
+      opacity: 0 !important;
+    }
+    
+    .doom-subtext {
+      font-family: 'IM Fell English SC', serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: #a4c99e;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      max-width: 420px;
+      width: 100%;
+      text-decoration: none !important;
+    transition: opacity 1.5s ease-in-out !important;
+    }
     
 </style>
 </head>
@@ -375,7 +393,8 @@ transform: scale(0.97);
   <audio id="doom-sound-15" src="https://www.myinstants.com/media/sounds/sus-x-files.mp3"></audio>
 <audio id="doom-sound-16" src="https://www.myinstants.com/media/sounds/number-15-burger-king-foot-lettuce.mp3"></audio>
   
-  
+  <p id="fade-subtext" class="doom-subtext">...Yeah, well- you definitely don't have the guts to press it again!</p>
+    
   <footer style="margin-top: 50px; text-align: center;">
     <img class="footer-gif no-save" src="logo.gif" alt="⋆˖⁺₊☽◯☾₊‧⁺˖⋆">
     <p class="bio">⋆˖⁺₊☽◯☾₊‧⁺˖⋆</p>
@@ -433,6 +452,8 @@ const selectedSound = document.getElementById('doom-sound-' + randomRoll);
     activeDoomSound = selectedSound;
     selectedSound.currentTime = 0;
     selectedSound.play();
+
+    document.getElementById('fade-subtext').classList.remove('hidden-text');
   }
   }
   
