@@ -212,40 +212,31 @@ display: flex !important;
   flex-direction: column !important;
   align-items: cneter !important;
   justify-content: center !important;
-  gap: 15px !important;
-  margin: 40px auto 20px auto !important;
+  gap: 35px !important;
+  margin: 50px auto 30px auto !important;
   width: 100% !important;
   )
   
 /* Bottom GIF Style - Sharp, Jagged Punk Cutout Mask */
 .footer-gif {
-  width: 140px;
-height: auto;
-  max-width: 100%;
+  width: 80px;
+height: auto !important;
 object-fit: contain;
+  box-sizing: border-box !important;
   border-radius: 0px;
-display: inline-block;
-  padding: 18px;
-  background-color: var(--toxic-glow);
-  filter: drop-shadow(0px 0px 30px var(--toxic-glow));
-
-/* Slices the animated GIF down in the footer into tattered paper shards */
-clip-path: polygon(
-0% 12%, 18% 2%, 38% 8%, 52% 0%, 78% 10%, 90% 4%, 100% 14%,
-96% 38%, 100% 64%, 95% 82%, 100% 92%,
-82% 100%, 62% 92%, 48% 98%, 24% 94%, 0% 100%,
-4% 68%, 0% 48%, 2% 22%
-);
+display: inline-block !important;
+  padding: 20px !important;
+  background-color: var(--toxic-glow) !important;
 }
 
 .footer-logo {
-  width: 140px;
-height: auto;
-  max-width: 100%;
-object-fit: contain;
+  width: 80px !important;
+height: auto !important;
+  object-fit: contain !important;
+box-sizing: border-box !important;
   border-radius: 0px;
-display: block;
-  padding: 18px;
+display: inline-block !important;
+  padding: 20px !important;
   background-color: #8028A0 !important;
 /* Slices the animated GIF down in the footer into tattered paper shards */
 clip-path: polygon(
@@ -253,7 +244,7 @@ clip-path: polygon(
 96% 38%, 100% 64%, 95% 82%, 100% 92%,
 82% 100%, 62% 92%, 48% 98%, 24% 94%, 0% 100%,
 4% 68%, 0% 48%, 2% 22%
-);
+) !important;
 }
   
 h1 {
