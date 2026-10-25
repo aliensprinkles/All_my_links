@@ -315,28 +315,27 @@ transform: scale(0.97);
 
     /* Starting State: Completely invisible and hidden from user views on page load */
 .doom-subtext {
-font-family: 'Almendra', serif;
-font-weight: 400;
-font-size: 1.8rem;
+font-family: 'Almendra', serif !important;
+font-weight: 400 !important;
+font-size: 1.8rem !important;
 color: #a4c99e;
-text-align: center;
+text-align: center !important;
 margin-top: 15px;
 margin-bottom: 30px;
-max-width: 420px;
+max-width: 440px;
 width: 100%;
 text-decoration: none !important;
 
 /* Starting invisible parameters */
 opacity: 0 !important;
-  overflow: hidden;
-  max-height: 0px;
+  overflow: hidden !important;
+  max-height: 0px !important;
   transition: opacity 1.5s ease-in, max-height 1s ease-in, margin 1s ease-in !important;
 }
 
 /* THE CSS TRIGGER: The exact millisecond your active audio-playing class or button container receives focus or gets clicked, this kicks off the animation curve natively */
 .doom-btn:active + .doom-subtext,
-.doom-btn:focus + .doom-subtext, .doom-btn:active .doom-subtext,
-.doom-btn:focus .doom-subtext, .doom-btn:focus-within .doom-subtext {
+.doom-btn:focus + .doom-subtext {
   opacity: 1 !important;
   max-height: 100px !important;
   margin-top: 15px !important;
